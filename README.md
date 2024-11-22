@@ -1,21 +1,34 @@
 # DNS-Fixer
-When nekoray isn't closed properly, it usually messes up /etc/resolv.conf file, so here is the lazy fix. 
+When [nekoray](https://github.com/MatsuriDayo/nekoray) isn't closed properly, it usually messes up the `/etc/resolv.conf` file, so here is the lazy fix.
 
-## Creating Command in Linux
-First store the script in a permanent location
+## Overview
+This script provides a quick fix for the `/etc/resolv.conf` file when nekoray isn't closed properly.
 
-Open terminal & type :
-```
-sudo nano .bashrc
-```
+## Prerequisites
+- Linux operating system
+- Python 3+ installed
 
-edit the script path in the following command :
-```
-alias fixdns='sudo python3 [File path]DNS\ Fixer.py'
-```
-Go to the end of bashrc file and Paste it.
+## Usage
+1. Store the script in a permanent location on your system.
 
-Press CTRL+O to save and CTRL+X To exit.
+2. Open terminal and edit the `.bashrc` file:
+   ```bash
+   sudo nano ~/.bashrc
+   ```
 
-Reboot and enjoy.
+3. Add the following alias to the end of the `.bashrc` file, replacing `[File path]` with the path to the script:
+   ```bash
+   alias fixdns='sudo python3 [File path]/DNS\ Fixer.py'
+   ```
 
+4. Save the file with `CTRL+O` and exit with `CTRL+X`.
+
+5. Reboot your system for the changes to take effect.
+
+6. Use the command `fixdns` to run the script and fix DNS issues:
+   ```bash
+   fixdns
+   ```
+
+## License
+This project is licensed under the MIT License.
